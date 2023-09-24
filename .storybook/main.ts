@@ -7,7 +7,23 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    // '@storybook/addon-styling',
+    {
+      name: '@storybook/addon-styling',
+      options: {},
+    },
+    'storybook-addon-sass-postcss',
+    {
+      name: 'storybook-addon-sass-postcss',
+      options: {
+        loadSassAfterPostCSS: true,
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+        sassLoaderOptions: {
+          implementation: require('sass'),
+        },
+      },
+    },
   ],
   framework: {
     name: '@storybook/nextjs',

@@ -6,7 +6,8 @@
 // classnames
 // Packages.json, package-lock.json
 
-import React from 'react'
+import clsx from 'clsx'
+import './button.scss'
 
 interface ButtonProps {
   type?: 'filled' | 'pill' | 'outline' | 'link'
@@ -14,24 +15,24 @@ interface ButtonProps {
   label?: string
   IconSource?: React.ComponentType<{ classNames?: string }>
   iconPosition?: 'left' | 'right' | 'only' | 'none'
-  IconLoadingSource?: React.ComponentType<{ classNames?: string }>
-  iconLoadingPosition?: 'left' | 'right' | 'only' | 'none'
+  // IconLoadingSource?: React.ComponentType<{ classNames?: string }>
+  // iconLoadingPosition?: 'left' | 'right' | 'only' | 'none'
   disabled?: boolean
-  loading?: boolean
-  onClick?: () => void
+  // loading?: boolean
+  // onClick?: () => void
 }
 
 export const Button = (props: ButtonProps) => {
   const {
     type = 'filled',
     size = 'md',
-    label,
+    label = 'Button',
     IconSource,
     iconPosition = 'none',
-    IconLoadingSource,
-    iconLoadingPosition = 'none',
-    loading = false,
-    onClick,
+    // IconLoadingSource,
+    // iconLoadingPosition = 'none',
+    // loading = false,
+    // onClick,
     disabled = false,
   } = props
 
@@ -305,9 +306,32 @@ export const Button = (props: ButtonProps) => {
   //     break
   // }
   return (
-    <button
-    // onClick={onClick}
-    // className={`${BASE_CLASS} ${TYPE_CLASSES} ${SIZE_CLASSES}`}
-    ></button>
+    console.log({ iconPosition, IconSource }),
+    (
+      <button
+        className={clsx(
+          'button',
+          `button-variant-${type}-${size}`,
+          `button-size-${size}`,
+          { 'button-disabled': disabled },
+          {
+            [`button-size-icon-${size}`]: IconSource && iconPosition == 'only',
+          },
+          {
+            [`button-icon-${type}`]:
+              (IconSource && iconPosition == 'only') || 'left' || 'right',
+          },
+        )}
+        style={{
+          display: 'flex',
+          flexDirection: iconPosition === 'right' ? 'row-reverse' : 'row',
+        }}
+      >
+        <div className={clsx(`button-container-${iconPosition}-${size}`)}>
+          {IconSource && iconPosition != 'none' && <IconSource />}
+        </div>
+        {iconPosition != 'only' && label}
+      </button>
+    )
   )
 }

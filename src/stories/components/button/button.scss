@@ -1,121 +1,186 @@
-// .button {
-//   @apply cursor-pointer items-center font-archivo;
-// }
-// .button-disabled {
-//   @apply cursor-not-allowed bg-light-theme-400 text-light-theme-600;
-// }
+.button {
+  @apply flex cursor-pointer  items-center justify-center font-archivo;
+}
+.button-disabled {
+  @apply cursor-not-allowed bg-light-theme-400 text-light-theme-600;
+}
+.button-size {
+  &-xs {
+    @apply px-3 py-2 text-xs;
+  }
+  &-sm {
+    @apply px-3 py-2 text-sm;
+  }
+  &-md {
+    @apply px-5 py-[10px] text-base;
+  }
+  &-lg {
+    @apply px-5 py-3 text-lg;
+  }
+  &-xl {
+    @apply px-6 py-[14px] text-xl;
+  }
+}
+.button-size-icon {
+  &-xs {
+    @apply p-2;
+  }
+  &-sm {
+    @apply p-[10px];
+  }
+  &-md {
+    @apply p-2;
+  }
+  &-lg {
+    @apply p-3;
+  }
+  &-xl {
+    @apply p-[14px];
+  }
+}
+.button-container {
+  &-left {
+    &-xs {
+      @apply mr-2 h-3 w-3;
+    }
+    &-sm {
+      @apply mr-2 h-4 w-4;
+    }
+    &-md {
+      @apply mr-3  h-[18px] w-[18px];
+    }
+    &-lg {
+      @apply mr-3 h-6 w-6;
+    }
+    &-xl {
+      @apply mr-3 h-6 w-6;
+    }
+  }
+  &-right {
+    &-xs {
+      @apply ml-2 h-3 w-3;
+    }
+    &-sm {
+      @apply ml-2 h-4 w-4;
+    }
+    &-md {
+      @apply ml-3 h-[18px] w-[18px];
+    }
+    &-lg {
+      @apply ml-3 h-6 w-6;
+    }
+    &-xl {
+      @apply ml-3 h-6 w-6;
+    }
+  }
+  &-only {
+    &-xs {
+      @apply h-3 w-3;
+    }
+    &-sm {
+      @apply h-4 w-4;
+    }
+    &-md {
+      @apply h-5 w-5;
+    }
+    &-lg {
+      @apply h-6 w-6;
+    }
+    &-xl {
+      @apply h-6 w-6;
+    }
+  }
+}
+.button-icon {
+  &-filled {
+    @apply fill-white;
+  }
+  &-pill {
+    @apply fill-white;
+  }
+  &-outline {
+    @apply fill-primary-dark-blue-500;
+  }
+  &-link {
+    @apply fill-primary-blue-500;
+  }
+}
 
-// .button-variant-filled {
-//   @apply bg-primary-blue-500 text-white focus:outline-0 dark:bg-black  dark:text-white;
-
-//   $rounded-sizes: (
-//     xs: rounded-lg,
-//     sm: rounded-lg,
-//     md: rounded-xl,
-//     lg: rounded-xl,
-//     xl: rounded-xl,
-//   );
-//   @if map-has-key($rounded-sizes, $size) {
-//     @apply map-get($rounded-sizes, $size);
-//   }
-//   &:hover {
-//     @apply g-primary-blue-700;
-//   }
-//   &:focus {
-//     @apply border-[3px] border-primary-blue-100 outline-0;
-//   }
-// }
-
-// .button-variant-pill {
-//   @apply rounded-full bg-primary-blue-500 text-white dark:bg-black;
-
-//   &:hover {
-//     @apply bg-primary-blue-700;
-//   }
-//   &:focus {
-//     @apply border-[3px] border-primary-blue-100 outline-0;
-//   }
-// }
-
-// .button-variant-outline {
-//   @apply border-[1px] border-light-theme-400 bg-white text-primary-dark-blue-500;
-
-//   $rounded-sizes: (
-//     xs: rounded-lg,
-//     sm: rounded-lg,
-//     md: rounded-xl,
-//     lg: rounded-xl,
-//     xl: rounded-xl,
-//   );
-//   @if map-has-key($rounded-sizes, $size) {
-//     @apply map-get($rounded-sizes, $size);
-//   }
-
-//   &:hover {
-//     @apply bg-light-theme-300;
-//   }
-//   &:focus {
-//     @apply border-2 border-primary-blue-100 outline-0;
-//   }
-// }
-
-// .button-variant-link {
-//   @apply bg-white text-primary-blue-500;
-
-//   $rounded-sizes: (
-//     xs: rounded-lg,
-//     sm: rounded-lg,
-//     md: rounded-xl,
-//     lg: rounded-xl,
-//     xl: rounded-xl,
-//   );
-//   @if map-has-key($rounded-sizes, $size) {
-//     @apply map-get($rounded-sizes, $size);
-//   }
-//   &:hover {
-//     @apply bg-primary-blue-50;
-//   }
-
-//   &:focus {
-//     @apply border-2 border-primary-blue-100 outline-0;
-//   }
-// }
-
-// .button-size-icon {
-//   $rounded-sizes: (
-//     xs: p-2,
-//     sm: p-2,
-//     md: p-2,
-//     lg: p-3,
-//     xl: p-3,
-//   );
-//   @if map-has-key($rounded-sizes, $size) {
-//     @apply map-get($rounded-sizes, $size);
-//   }
-// }
-// .button-size {
-//   $rounded-sizes: (
-//     xs: px-3 py-2 text-xs,
-//     sm: px-3 py-2 text-sm,
-//     md: px-5 py-2 text-base,
-//     lg: px-5 py-3 text-lg,
-//     xl: px-6 py-4 text-xl,
-//   );
-//   @if map-has-key($rounded-sizes, $size) {
-//     @apply map-get($rounded-sizes, $size);
-//   }
-// }
-// .icon-disabled {
-//   @apply fill-light-theme-400;
-// }
-// .icon {
-//   $fill-color: (
-//     filled: fill-white,
-//     pill: fill-white,
-//     outline: fill-primary-dark-blue-500,
-//     link: fill-primary-blue-500,
-//   );
-//   @if map-has-key($fill-color, $type) {
-//     @apply map-get($fill-color, $type);
-//   }
-// }
+.button-variant {
+  &-filled {
+    @apply bg-primary-blue-500 text-white dark:bg-black dark:text-white;
+    &-xs,
+    &-sm {
+      @extend .button-variant-filled;
+      @apply rounded-lg;
+    }
+    &-md,
+    &-lg,
+    &-xl {
+      @extend .button-variant-filled;
+      @apply rounded-xl;
+    }
+    &:hover {
+      @apply bg-primary-blue-700;
+    }
+    &:focus {
+      @apply border-2 border-primary-blue-100 outline-0;
+    }
+  }
+  &-pill {
+    &-xs,
+    &-sm,
+    &-md,
+    &-lg,
+    &-xl {
+      @apply bg-primary-blue-500 text-white dark:bg-black dark:text-white;
+      @apply rounded-full;
+    }
+    &:hover {
+      @apply bg-primary-blue-700;
+    }
+    &:focus {
+      @apply border-2 border-primary-blue-100 outline-0;
+    }
+  }
+  &-outline {
+    @apply border-[1px] border-light-theme-400 bg-white text-primary-dark-blue-500;
+    &-xs,
+    &-sm {
+      @extend .button-variant-outline;
+      @apply rounded-lg;
+    }
+    &-md,
+    &-lg,
+    &-xl {
+      @extend .button-variant-outline;
+      @apply rounded-xl;
+    }
+    &:hover {
+      @apply bg-light-theme-300;
+    }
+    &:focus {
+      @apply border-2 border-primary-blue-100 outline-0;
+    }
+  }
+  &-link {
+    @apply bg-white text-primary-blue-500;
+    &-xs,
+    &-sm {
+      @extend .button-variant-link;
+      @apply rounded-lg;
+    }
+    &-md,
+    &-lg,
+    &-xl {
+      @extend .button-variant-link;
+      @apply rounded-xl;
+    }
+    &:hover {
+      @apply bg-primary-blue-50;
+    }
+    &:focus {
+      @apply border-2 border-primary-blue-100 outline-0;
+    }
+  }
+}
