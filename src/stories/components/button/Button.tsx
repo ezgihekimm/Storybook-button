@@ -40,10 +40,10 @@ export const Button = (props: ButtonProps) => {
     console.log({ iconPosition, IconSource }),
     (
       <button
-        onClick={onClick}
+        onClick={!disabled ? onClick : undefined}
         className={clsx(
           'button',
-          `button-variant-${type}-${size}`,
+          `button-variant-${type}`,
           `button-size-${size}`,
           { 'button-disabled': disabled },
           {
