@@ -1,9 +1,0 @@
-[build]
-  command = "yarn build" 
-  publish = "storybook-static" 
-
-[context.production]
-  command = "yarn build" 
-
-[context.deploy-preview]
-  command = "yarn build" 
