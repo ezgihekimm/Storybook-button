@@ -1,6 +1,6 @@
 [build]
   command = "yarn build-storybook" # Storybook'u derlemek için kullanılan komut
-  publish = ".next" # Storybook'un oluşturduğu statik dosyaların konumu
+  publish = "storybook-static/" # Storybook'un oluşturduğu statik dosyaların konumu
 
 [context.production]
   command = "yarn build-storybook" # Production ortamı için komut
