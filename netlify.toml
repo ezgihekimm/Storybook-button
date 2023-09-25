@@ -1,9 +1,0 @@
-[build]
-  command = "yarn build" # Storybook'u derlemek için kullanılan komut
-  publish = ".next" # Storybook'un oluşturduğu statik dosyaların konumu
-
-[context.production]
-  command = "yarn build-storybook" # Production ortamı için komut
-
-[context.deploy-preview]
-  command = "yarn build-storybook" # Ön izleme ortamı için komut
