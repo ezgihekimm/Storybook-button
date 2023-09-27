@@ -1,7 +1,7 @@
 .button {
   @apply flex cursor-pointer  items-center justify-center font-archivo;
   &:focus {
-    @apply border-2 border-primary-blue-100 outline-0;
+    @apply outline outline-2 outline-offset-0 outline-primary-blue-100;
   }
 }
 .button-disabled {
