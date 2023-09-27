@@ -95,7 +95,7 @@ import { FaIcon, AiIcon } from 'icon-library'; // Replace with your icon compone
 <Button label="Search" IconSource={FaIcon} iconPosition="left" />
 <Button label="Delete" IconSource={AiIcon} iconPosition="right" />
 <Button label="Only" IconSource={AiIcon} iconPosition="only" />
-}
+
 ```
 
 #### Loading State
@@ -108,7 +108,7 @@ import { LoadingIcon } from 'spinner-icons'; // Replace with your loading spinne
 
 <Button loading={true} IconLoadingSource={LoadingIcon} iconLoadingPosition="left" />
 <Button loading={true} IconLoadingSource={LoadingIcon} iconLoadingPosition="only" />
-}
+
 ```
 
 #### Disabling the Button
