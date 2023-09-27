@@ -12,12 +12,6 @@ Install Dependencies
 yarn install
 ```
 
-Run the Development Server
-
-```bash
-yarn dev
-```
-
 Start Storybook
 
 ```bash
@@ -39,6 +33,17 @@ function App() {
 ### Customization Options
 
 The Button Component offers various customization options:
+
+#### Props
+
+| Attributes |               Type               | Default  |
+| :--------- | :------------------------------: | :------: |
+| type       | `filled`,`pill`,`outline`,`link` | `filled` |
+| size       |     `xs`,`sm`,`md`,`lg`,`xl`     |   `xs`   |
+| label      |             `string`             | `Button` |
+| disabled   |            `boolean`             | `false`  |
+| loading    |            `boolean`             | `false`  |
+| onClick    |            `function`            |  `void`  |
 
 #### Button Types
 
@@ -129,14 +134,3 @@ To disable the button, set the `disabled` prop to true:
   type="filled"
 />
 ```
-
-## Props
-
-| Attributes |               Type               | Default  |
-| :--------- | :------------------------------: | :------: |
-| type       | `filled`,`pill`,`outline`,`link` | `filled` |
-| size       |     `xs`,`sm`,`md`,`lg`,`xl`     |   `xs`   |
-| label      |             `string`             | `Button` |
-| disabled   |            `boolean`             | `false`  |
-| loading    |            `boolean`             | `false`  |
-| onClick    |            `function`            |  `void`  |
