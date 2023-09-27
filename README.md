@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Button Component
 
-## Getting Started
+The Button component is a React component that allows you to create a customizable button that can adapt to various usage scenarios.
 
-First, run the development server:
+![App Screenshot](https://raw.githubusercontent.com/ezgihekimm/storybook-button/main/Screenshot%202023-09-27%20at%2013.04.25.png)
+
+## Installation and Running
+
+Install Dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the Development Server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start Storybook
 
-## Learn More
+```bash
+yarn run storybook
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Basic Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```javascript
+import { Button } from '@/stories/components/button/Button'
 
-## Deploy on Vercel
+function App() {
+  return <Button />
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Customization Options
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Button Component offers various customization options:
+
+#### Button Types
+
+You can specify different button types using the `type` prop:
+
+- `filled`
+
+- `pill`
+
+- `outlined`
+
+- `link`
+
+```javascript
+function App() {
+  <Button label="Primary" type="filled" />
+  <Button label="Secondary" type="pill" />
+}
+```
+
+#### Button Sizes
+
+The `size` prop allows you to set the button size:
+
+- `xs`
+
+- `sm`
+
+- `md`
+
+- `lg`
+
+- `xl`
+
+```javascript
+function App() {
+  <Button label="Small" size="sm" />
+  <Button label="Medium" size="md" />
+}
+```
+
+#### Adding Icons
+
+You can add icons to your buttons with the `IconSource` prop and specify the icon's position using `iconPosition`:
+
+```javascript
+import { FaIcon, AiIcon } from 'icon-library'; // Replace with your icon components
+
+<Button label="Search" IconSource={FaIcon} iconPosition="left" />
+<Button label="Delete" IconSource={AiIcon} iconPosition="right" />
+<Button label="Only" IconSource={AiIcon} iconPosition="only" />
+}
+```
+
+#### Loading State
+
+You can add an icon to the loading button and specify its position using the `IconLoadingSource`,
+`iconLoadingPosition` and `loading` props
+
+```javascript
+import { LoadingIcon } from 'spinner-icons'; // Replace with your loading spinner components
+
+<Button loading={true} IconLoadingSource={LoadingIcon} iconLoadingPosition="left" />
+<Button loading={true} IconLoadingSource={LoadingIcon} iconLoadingPosition="only" />
+}
+```
+
+#### Disabling the Button
+
+To disable the button, set the `disabled` prop to true:
+
+```javascript
+<Button label="Disabled" disabled={true} />
+```
+
+## Example
+
+![App Screenshot](https://raw.githubusercontent.com/ezgihekimm/storybook-button/main/Screenshot%202023-09-27%20at%2013.00.21.png)
+
+```javascript
+<Button
+  IconLoadingSource={() => {}}
+  IconSource={() => {}}
+  iconPosition="left"
+  label="Button"
+  onClick={() => {}}
+  size="lg"
+  type="filled"
+/>
+```
+
+## Props
+
+| Attributes |               Type               | Default  |
+| :--------- | :------------------------------: | :------: |
+| type       | `filled`,`pill`,`outline`,`link` | `filled` |
+| size       |     `xs`,`sm`,`md`,`lg`,`xl`     |   `xs`   |
+| label      |             `string`             | `Button` |
+| disabled   |            `boolean`             | `false`  |
+| loading    |            `boolean`             | `false`  |
+| onClick    |            `function`            |  `void`  |
