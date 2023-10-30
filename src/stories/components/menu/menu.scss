@@ -1,0 +1,21 @@
+.typography {
+  @apply font-archivo font-medium text-neutral-800;
+}
+.position {
+  @apply flex flex-row;
+}
+.padding {
+  @apply py-3 pe-16 ps-4;
+}
+.gap {
+  @apply gap-3;
+}
+.border-radius {
+  @apply rounded-lg;
+}
+.hover-open {
+  @apply bg-neutral-100;
+}
+.active-open {
+  @apply text-secondary-blue-500;
+}

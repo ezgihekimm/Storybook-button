@@ -37,49 +37,46 @@ export const Button = (props: ButtonProps) => {
   } = props
 
   return (
-    console.log({ iconPosition, IconSource }),
-    (
-      <button
-        onClick={!disabled ? onClick : undefined}
-        className={clsx(
-          'button',
-          `button-variant-${type}`,
-          `button-size-${size}`,
-          { 'button-disabled': disabled },
-          {
-            [`button-size-icon-${size}`]: IconSource && iconPosition == 'only',
-          },
-          {
-            [`button-size-icon-${size}`]:
-              IconLoadingSource && iconLoadingPosition == 'only',
-          },
-          {
-            [`button-icon-${type}`]:
-              (IconSource && iconPosition == 'only') || 'left' || 'right',
-          },
-          {
-            [`button-icon-${type}`]:
-              (IconLoadingSource && iconLoadingPosition == 'only') ||
-              'left' ||
-              'right',
-          },
-        )}
-        style={{
-          display: 'flex',
-          flexDirection:
-            iconPosition === 'right' || iconLoadingPosition === 'right'
-              ? 'row-reverse'
-              : 'row',
-        }}
-      >
-        <div className={clsx(`button-container-${iconPosition}-${size}`)}>
-          {loading
-            ? IconLoadingSource &&
-              iconLoadingPosition != 'none' && <IconLoadingSource />
-            : IconSource && iconPosition != 'none' && <IconSource />}
-        </div>
-        {iconPosition != 'only' && iconLoadingPosition != 'only' && label}
-      </button>
-    )
+    <button
+      onClick={!disabled ? onClick : undefined}
+      className={clsx(
+        'button',
+        `button-variant-${type}`,
+        `button-size-${size}`,
+        { 'button-disabled': disabled },
+        {
+          [`button-size-icon-${size}`]: IconSource && iconPosition == 'only',
+        },
+        {
+          [`button-size-icon-${size}`]:
+            IconLoadingSource && iconLoadingPosition == 'only',
+        },
+        {
+          [`button-icon-${type}`]:
+            (IconSource && iconPosition == 'only') || 'left' || 'right',
+        },
+        {
+          [`button-icon-${type}`]:
+            (IconLoadingSource && iconLoadingPosition == 'only') ||
+            'left' ||
+            'right',
+        },
+      )}
+      style={{
+        display: 'flex',
+        flexDirection:
+          iconPosition === 'right' || iconLoadingPosition === 'right'
+            ? 'row-reverse'
+            : 'row',
+      }}
+    >
+      <div className={clsx(`button-container-${iconPosition}-${size}`)}>
+        {loading
+          ? IconLoadingSource &&
+            iconLoadingPosition != 'none' && <IconLoadingSource />
+          : IconSource && iconPosition != 'none' && <IconSource />}
+      </div>
+      {iconPosition != 'only' && iconLoadingPosition != 'only' && label}
+    </button>
   )
 }

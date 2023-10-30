@@ -1,4 +1,3 @@
-import { archivo } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import './globals.scss'
 
@@ -14,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${archivo.className}`}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

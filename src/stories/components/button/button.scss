@@ -7,7 +7,7 @@
 .button-disabled {
   @each $variant in filled, pill, outline, link {
     &.button-variant-#{$variant} {
-      @apply bg-light-theme-400 text-light-theme-600 hover:bg-light-theme-400 focus:border-0;
+      @apply bg-neutral-400 text-neutral-600 hover:bg-neutral-400 focus:border-0;
     }
   }
 }
@@ -47,9 +47,9 @@
     }
   }
   &-outline {
-    @apply border-[1px] border-light-theme-400 bg-white text-primary-dark-blue-500;
+    @apply border-[1px] border-neutral-400 bg-white text-primary-blue-500;
     &:hover {
-      @apply bg-light-theme-300;
+      @apply bg-neutral-300;
     }
   }
   &-link {
@@ -137,7 +137,7 @@
     @apply fill-white;
   }
   &-outline {
-    @apply fill-primary-dark-blue-500;
+    @apply fill-primary-blue-500;
   }
   &-link {
     @apply fill-primary-blue-500;

@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 .dark {
-  @apply bg-dark-theme-900 text-white;
+  @apply bg-dark-900 text-white;
 }
 .light {
   @apply bg-white text-white;
+}
+
+@font-face {
+  font-family: 'Archivo-Semi';
+  src: url('../../fonts/Archivo_SemiExpanded-Bold.ttf');
 }
