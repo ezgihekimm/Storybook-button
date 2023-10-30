@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import HomeActiveIcon from '../../assets/homeActiveIcon'
 import HomeIcon from '../../assets/homeIcon'
 import { Menu } from './Menu'
 
@@ -19,6 +20,7 @@ export const Default: Story = {
   args: {
     label: 'Genel Bakış',
     iconSource: HomeIcon,
+    iconSourceActive: HomeActiveIcon,
     hoverOpen: false,
     activeOpen: false,
   },
