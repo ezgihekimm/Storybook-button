@@ -2,7 +2,7 @@
 
 The Button component is a React component that allows you to create a customizable button that can adapt to various usage scenarios.
 
-![App Screenshot](https://raw.githubusercontent.com/ezgihekimm/storybook-button/main/Screenshot%202023-09-27%20at%2013.04.25.png)
+![App Screenshot](https://github.com/ezgihekimm/storybook-button/blob/main/buttonVariant.png)
 
 ## Installation and Running
 
@@ -121,7 +121,7 @@ To disable the button, set the `disabled` prop to true:
 
 ## Example
 
-![App Screenshot](https://raw.githubusercontent.com/ezgihekimm/storybook-button/main/Screenshot%202023-09-27%20at%2013.00.21.png)
+![App Screenshot](https://github.com/ezgihekimm/storybook-button/blob/main/button.png)
 
 ```javascript
 <Button
