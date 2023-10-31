@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Size } from './Size'
+import { Text } from './Text'
 
 const meta = {
-  title: 'Example/Size',
-  component: Size,
+  title: 'Example/Text',
+  component: Text,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Size>
+} satisfies Meta<typeof Text>
 
 export default meta
 

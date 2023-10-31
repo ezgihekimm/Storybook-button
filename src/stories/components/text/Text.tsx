@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import './size.scss'
+import './text.scss'
 
-interface SizeProps {
+interface TextProps {
   size?:
     | 'xs'
     | 'sm'
@@ -18,12 +18,12 @@ interface SizeProps {
   heading?: boolean
 }
 
-export const Size = (props: SizeProps) => {
+export const Text = (props: TextProps) => {
   const {
     size = 'base',
-    label = 'The quick brown fox jumps over the lazy dog.',
     weight = 'normal',
     heading = false,
+    label = '',
   } = props
 
   return (
@@ -35,6 +35,7 @@ export const Size = (props: SizeProps) => {
         heading ? 'font-local' : 'font-archivo',
       )}
     >
+      {' '}
       {label}
     </div>
   )

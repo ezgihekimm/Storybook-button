@@ -1,21 +1,6 @@
-.text-menu {
-  @apply font-archivo font-medium text-neutral-800;
+.menu {
+  @apply flex flex-row gap-3 rounded-lg py-3 pe-16 ps-4 font-archivo font-medium text-neutral-800 hover:bg-neutral-100;
 }
-.position {
-  @apply flex flex-row;
-}
-.padding {
-  @apply py-3 pe-16 ps-4;
-}
-.gap {
-  @apply gap-3;
-}
-.border-radius {
-  @apply rounded-lg;
-}
-.bg-open {
-  @apply bg-neutral-100;
-}
-.active-open {
-  @apply text-secondary-blue-500;
+.actived {
+  @apply bg-neutral-100 text-secondary-blue-500;
 }

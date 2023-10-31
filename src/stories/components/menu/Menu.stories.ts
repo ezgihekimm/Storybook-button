@@ -19,9 +19,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     label: 'Genel Bakış',
-    iconSource: HomeIcon,
-    iconSourceActive: HomeActiveIcon,
-    hoverOpen: false,
-    activeOpen: false,
+    Source: HomeIcon,
+    SourceActive: HomeActiveIcon,
+    actived: false,
   },
 }
