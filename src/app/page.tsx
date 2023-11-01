@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Button label="Button" />
-      <Text />
+      <Text>EZGİ</Text>
     </>
   )
 }

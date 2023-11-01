@@ -17,8 +17,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     size: 'base',
-    label: 'The quick brown fox jumps over the lazy dog.',
     weight: 'normal',
     heading: false,
+    children: 'Hello World',
   },
 }
