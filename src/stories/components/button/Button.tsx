@@ -10,7 +10,7 @@ import clsx from 'clsx'
 import './button.scss'
 
 interface ButtonProps {
-  type?: 'filled' | 'pill' | 'outline' | 'link'
+  type?: 'filled' | 'pill' | 'outline' | 'link' | 'pillInstance'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   label?: string
   IconSource?: React.ComponentType<{ classNames?: string }>

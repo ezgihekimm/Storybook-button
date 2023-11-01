@@ -41,6 +41,11 @@
       .button-variant-pill {
         @apply rounded-full;
       }
+      @at-root {
+        .button-variant-pillInstance {
+          @apply rounded-full bg-neutral-300;
+        }
+      }
     }
     &:hover {
       @apply bg-primary-blue-700;
@@ -119,7 +124,6 @@
       @apply h-4 w-4;
     }
     &-md {
-      @apply h-5 w-5;
     }
     &-lg {
       @apply h-6 w-6;
