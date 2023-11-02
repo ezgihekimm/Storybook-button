@@ -9,19 +9,6 @@
 import clsx from 'clsx'
 import './button.scss'
 
-interface ButtonProps {
-  type?: 'filled' | 'pill' | 'outline' | 'link' | 'pillInstance'
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  label?: string
-  IconSource?: React.ComponentType<{ classNames?: string }>
-  iconPosition?: 'left' | 'right' | 'only' | 'none'
-  IconLoadingSource?: React.ComponentType<{ classNames?: string }>
-  iconLoadingPosition?: 'left' | 'right' | 'only' | 'none'
-  disabled?: boolean
-  loading?: boolean
-  onClick?: () => void
-}
-
 export const Button = (props: ButtonProps) => {
   const {
     type = 'filled',

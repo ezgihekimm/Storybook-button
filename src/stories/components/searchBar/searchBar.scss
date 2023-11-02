@@ -1,0 +1,12 @@
+.search-bar {
+  @apply flex w-[272px] flex-row items-center justify-between rounded-lg bg-neutral-300 p-2;
+}
+.placeholder-text {
+  @apply ml-2 text-sm text-neutral-700;
+}
+.column {
+  @apply flex flex-row;
+}
+.end-icon-text {
+  @apply text-xs text-neutral-600;
+}

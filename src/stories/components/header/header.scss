@@ -1,9 +1,15 @@
 .header {
-  @apply flex  w-screen flex-row justify-between pb-3 pe-6 ps-6 pt-3;
+  @apply flex w-screen flex-row justify-between pb-3 pe-6 ps-6 pt-3;
 }
-.hl {
-  @apply ml-4 mr-4 border-r-2 border-neutral-500;
+.vl {
+  @apply ml-4 mr-4 flex h-[30px] border-r-[1px] border-neutral-500;
 }
-.col-right {
-  @apply flex flex-row;
+.column {
+  @apply flex items-center;
+}
+.sub-col-right {
+  @apply ml-4 flex flex-row gap-2;
+}
+.blue-box {
+  @apply ml-3 mr-2  flex  justify-center rounded-lg bg-primary-blue-50 pb-1 pe-2 ps-2 pt-1 text-primary-blue-500;
 }

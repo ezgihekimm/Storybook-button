@@ -1,11 +1,14 @@
+import Logo from '@/stories/assets/logo'
 import { Button } from '@/stories/components/button/Button'
-import { Text } from '@/stories/components/text/Text'
+import { Header } from '@/stories/components/header/Header'
 
 export default function Home() {
   return (
     <>
-      <Button label="Button" />
-      <Text>EZGİ</Text>
+      <Header logo={Logo} buttonText="eee" dropDownText="eeez" />
+      {/* <Button label="Button" />
+      <Text>EZGİ</Text> */}
+      <Button label="buto" type="pill" />
     </>
   )
 }

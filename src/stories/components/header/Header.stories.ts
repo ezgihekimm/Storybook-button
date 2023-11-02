@@ -20,5 +20,9 @@ export const Default: Story = {
   args: {
     buttonText: 'Kripto Al',
     logo: Logo,
+    dropDownText: 'Pro',
+    searchBar: true,
+    blueBox: true,
+    blueBoxText: 'Beta',
   },
 }
