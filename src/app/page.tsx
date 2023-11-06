@@ -1,8 +1,8 @@
 'use client'
-import { renderIcon } from '@/lib/types'
 import Logo from '@/stories/assets/logo'
 import { Button } from '@/stories/components/button/Button'
 import { Header } from '@/stories/components/header/Header'
+import { renderIcon } from '@/stories/components/icon/icon'
 import Image from 'next/image'
 
 export default function Home() {

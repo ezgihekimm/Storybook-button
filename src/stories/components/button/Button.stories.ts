@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
-import ExampleIcon from '../../assets/exampleIcon'
-import LoadingIcon from '../../assets/loadingIcon'
+import { renderIcon } from '../icon/icon'
 import { Button } from './Button'
+
+const buttonIcon = renderIcon('paperAirplane')
+const loadingIcon = renderIcon('loading')
 
 const meta = {
   title: 'Example/Button',
@@ -23,8 +24,8 @@ export const Filled: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: ExampleIcon,
-    IconLoadingSource: LoadingIcon,
+    IconSource: buttonIcon,
+    IconLoadingSource: loadingIcon,
     loading: false,
   },
 }
@@ -36,8 +37,8 @@ export const Pill: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: ExampleIcon,
-    IconLoadingSource: LoadingIcon,
+    IconSource: buttonIcon,
+    IconLoadingSource: loadingIcon,
   },
 }
 export const Outline: Story = {
@@ -47,8 +48,8 @@ export const Outline: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: ExampleIcon,
-    IconLoadingSource: LoadingIcon,
+    IconSource: buttonIcon,
+    IconLoadingSource: loadingIcon,
   },
 }
 
@@ -59,7 +60,7 @@ export const Link: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: ExampleIcon,
-    IconLoadingSource: LoadingIcon,
+    IconSource: buttonIcon,
+    IconLoadingSource: loadingIcon,
   },
 }
