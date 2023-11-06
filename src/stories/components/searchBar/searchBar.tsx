@@ -1,6 +1,14 @@
 import clsx from 'clsx'
 import './searchBar.scss'
 
+export default interface SearchBarProps {
+  placeholder?: string
+  endLetter?: string
+  startIcon?: React.ReactNode
+  endIcon?: React.ReactNode
+  onClick?: () => void
+}
+
 export const SearchBar = (props: SearchBarProps) => {
   const {
     placeholder = 'Arama Yap',

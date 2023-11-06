@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import React from 'react'
 import BellIcon from '../../assets/bell'
 import ChevronDown from '../../assets/chevronDown'
 import Command from '../../assets/command'
@@ -12,7 +11,7 @@ import { SearchBar } from '../searchBar/searchBar'
 import { Text } from '../text/Text'
 import './header.scss'
 
-interface HeaderProps {
+export default interface HeaderProps {
   logo?: React.ComponentType<{ classNames?: string }>
   buttonText?: string
   dropDownText?: string

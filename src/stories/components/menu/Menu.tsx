@@ -1,11 +1,10 @@
 import clsx from 'clsx'
-import React from 'react'
 import './menu.scss'
 
-interface MenuProps {
+export default interface MenuProps {
   label?: string
-  Source?: React.ComponentType<{ classNames?: string }>
-  SourceActive?: React.ComponentType<{ classNames?: string }>
+  Source?: React.ReactNode
+  SourceActive?: React.ReactNode
   actived?: boolean
 }
 

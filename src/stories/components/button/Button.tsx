@@ -6,8 +6,23 @@
 // classnames
 // Packages.json, package-lock.json
 
+import { ButtonSize, ButtonType, Position } from '@/lib/types'
 import clsx from 'clsx'
+import Image from 'next/image'
 import './button.scss'
+
+export default interface ButtonProps {
+  type?: ButtonType
+  size?: ButtonSize
+  label?: string
+  IconSource?: any
+  iconPosition?: Position
+  IconLoadingSource?: any
+  iconLoadingPosition?: Position
+  disabled?: boolean
+  loading?: boolean
+  onClick?: () => void
+}
 
 export const Button = (props: ButtonProps) => {
   const {
@@ -60,8 +75,13 @@ export const Button = (props: ButtonProps) => {
       <div className={clsx(`button-container-${iconPosition}-${size}`)}>
         {loading
           ? IconLoadingSource &&
-            iconLoadingPosition != 'none' && <IconLoadingSource />
-          : IconSource && iconPosition != 'none' && <IconSource />}
+            iconLoadingPosition != 'none' && (
+              <Image src={IconLoadingSource} alt="" width={24} height={24} />
+            )
+          : IconSource &&
+            iconPosition != 'none' && (
+              <Image src={IconSource} alt="" width={24} height={24} />
+            )}
       </div>
       {iconPosition != 'only' && iconLoadingPosition != 'only' && label}
     </button>
