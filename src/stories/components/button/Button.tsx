@@ -9,15 +9,16 @@
 import { ButtonSize, ButtonType, Position } from '@/lib/types'
 import clsx from 'clsx'
 import Image from 'next/image'
+import { IconType, renderIcon } from '../icon/icon'
 import './button.scss'
 
 export default interface ButtonProps {
   type?: ButtonType
   size?: ButtonSize
   label?: string
-  IconSource?: any
+  IconSource?: IconType
   iconPosition?: Position
-  IconLoadingSource?: any
+  IconLoadingSource?: IconType
   iconLoadingPosition?: Position
   disabled?: boolean
   loading?: boolean
@@ -37,7 +38,8 @@ export const Button = (props: ButtonProps) => {
     onClick,
     disabled = false,
   } = props
-
+  const baseIcon = renderIcon(IconSource)
+  const loadingIcon = renderIcon(IconLoadingSource)
   return (
     <button
       onClick={!disabled ? onClick : undefined}
@@ -75,13 +77,9 @@ export const Button = (props: ButtonProps) => {
       <div className={clsx(`button-container-${iconPosition}-${size}`)}>
         {loading
           ? IconLoadingSource &&
-            iconLoadingPosition != 'none' && (
-              <Image src={IconLoadingSource} alt="" width={24} height={24} />
-            )
+            iconLoadingPosition != 'none' && <Image src={loadingIcon} alt="" />
           : IconSource &&
-            iconPosition != 'none' && (
-              <Image src={IconSource} alt="" width={24} height={24} />
-            )}
+            iconPosition != 'none' && <Image src={baseIcon} alt="" />}
       </div>
       {iconPosition != 'only' && iconLoadingPosition != 'only' && label}
     </button>

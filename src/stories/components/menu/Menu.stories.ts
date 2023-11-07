@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import HomeActiveIcon from '../../assets/homeActiveIcon'
-import HomeIcon from '../../assets/homeIcon'
+import { renderIcon } from '../icon/icon'
 import { Menu } from './Menu'
+
+const icon = renderIcon('home')
+const activedIcon = renderIcon('homeActive')
 
 const meta = {
   title: 'Example/Menu',
@@ -19,8 +21,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     label: 'Genel Bakış',
-    Source: HomeIcon,
-    SourceActive: HomeActiveIcon,
+    icon: icon,
+    activedIcon: activedIcon,
     actived: false,
   },
 }
