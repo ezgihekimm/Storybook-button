@@ -11,8 +11,8 @@ export default interface MenuProps {
 
 export const Menu = (props: MenuProps) => {
   const { label = 'Genel Bakış', actived, icon, activedIcon } = props
-  const active = renderIcon(activedIcon)
-  const baseIcon = renderIcon(icon)
+  const active = activedIcon ? renderIcon(activedIcon) : null
+  const baseIcon = icon ? renderIcon(icon) : null
   return (
     <div className={clsx('menu', actived ? 'actived' : '')}>
       {actived ? (

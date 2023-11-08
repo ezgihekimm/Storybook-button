@@ -1,11 +1,7 @@
 import clsx from 'clsx'
-import BellIcon from '../../assets/bell'
+import Command from '../../assets/IconSet/command.svg'
 import ChevronDown from '../../assets/chevronDown'
-import Command from '../../assets/command'
 import magnifyingGlass from '../../assets/magnifyingGlass'
-import QuestionIcon from '../../assets/question'
-import UserIcon from '../../assets/user'
-import WalletIcon from '../../assets/wallet'
 import { Button } from '../button/Button'
 import { SearchBar } from '../searchBar/searchBar'
 import { Text } from '../text/Text'
@@ -44,7 +40,7 @@ export const Header = (props: HeaderProps) => {
       <div className="column">
         {LogoComponent && <LogoComponent />}
         <div className="vl"></div>
-        <Text size="xl" weight="medium">
+        <Text textSize="xl" weight="medium">
           {dropDownText}
         </Text>
         {blueBox && <div className="blue-box">{blueBoxText}</div>}
@@ -57,37 +53,8 @@ export const Header = (props: HeaderProps) => {
       </div>
       <div className="column">
         <Button label={buttonText} onClick={buttonClick} />
-        <div className="sub-col-right">
-          <Button
-            onClick={walletClick}
-            type="pillInstance"
-            IconSource={WalletIcon}
-            iconPosition="only"
-            size="md"
-          />
-          <Button
-            onClick={bellClick}
-            type="pillInstance"
-            IconSource={BellIcon}
-            iconPosition="only"
-            size="md"
-          />
-          <Button
-            onClick={questionClick}
-            type="pillInstance"
-            IconSource={QuestionIcon}
-            iconPosition="only"
-            size="md"
-          />
-        </div>
+        <div className="sub-col-right"></div>
         <div className="vl"></div>
-        <Button
-          onClick={userClick}
-          type="pillInstance"
-          IconSource={UserIcon}
-          iconPosition="only"
-          size="md"
-        />
       </div>
     </div>
   )

@@ -38,8 +38,8 @@ export const Button = (props: ButtonProps) => {
     onClick,
     disabled = false,
   } = props
-  const baseIcon = renderIcon(IconSource)
-  const loadingIcon = renderIcon(IconLoadingSource)
+  const baseIcon = IconSource ? renderIcon(IconSource) : null
+  const loadingIcon = IconLoadingSource ? renderIcon(IconLoadingSource) : null
   return (
     <button
       onClick={!disabled ? onClick : undefined}

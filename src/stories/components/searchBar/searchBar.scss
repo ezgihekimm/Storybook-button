@@ -1,5 +1,5 @@
 .search-bar {
-  @apply flex w-[272px] flex-row items-center justify-between rounded-lg bg-neutral-300 p-2;
+  @apply flex w-[272px] cursor-pointer flex-row items-center justify-between rounded-lg bg-neutral-300 p-2 hover:bg-neutral-400;
 }
 .placeholder-text {
   @apply ml-2 text-sm text-neutral-700;
