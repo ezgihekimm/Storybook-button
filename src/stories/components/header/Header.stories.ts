@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
-import Logo from '../../assets/logo'
 import { Header } from './Header'
 
 const meta = {
@@ -19,10 +17,14 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     buttonText: 'Kripto Al',
-    logo: Logo,
+    logo: 'logo',
     dropDownText: 'Pro',
     searchBar: true,
     blueBox: true,
     blueBoxText: 'Beta',
+    firstIcon: 'wallet',
+    secondIcon: 'bell',
+    thirdIcon: 'questionMark',
+    endIcon: 'user',
   },
 }

@@ -1,6 +1,6 @@
 .button {
   @apply flex cursor-pointer  items-center justify-center font-archivo;
-  &:focus {
+  &:active {
     @apply outline outline-2 outline-offset-0 outline-primary-blue-100;
   }
 }

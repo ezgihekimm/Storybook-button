@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import { IconType, renderIcon } from '../icon/icon'
+import Icon, { IconType, renderIcon } from '../icon/icon'
 import './searchBar.scss'
 
 export default interface SearchBarProps {
@@ -28,6 +28,7 @@ export const SearchBar = (props: SearchBarProps) => {
           <Image src={StartIcon} alt="startIcon" width={24} height={24} />
         )}
         <div className="placeholder-text">{placeholder}</div>
+        <Icon type="home" width={25} height={25} className="red" />
       </div>
       <div className="column">
         {endIcon && (
