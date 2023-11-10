@@ -22,18 +22,18 @@ export const SearchBar = (props: SearchBarProps) => {
   return (
     <div className={clsx('search-bar')} onClick={onClick}>
       <div className="column">
-        {startIcon && <Icon type={startIcon} width={20} height={20} />}
+        {startIcon && (
+          <Icon
+            type={startIcon}
+            width={20}
+            height={20}
+            className="stroke-cyan-500"
+          />
+        )}
         <div className="placeholder-text">{placeholder}</div>
       </div>
       <div className="column">
-        {endIcon && (
-          <Icon
-            type={endIcon}
-            width={12}
-            height={12}
-            className="text-red-500"
-          />
-        )}
+        {endIcon && <Icon type={endIcon} width={12} height={12} />}
         <div className="end-icon-text">{endLetter}</div>
       </div>
     </div>

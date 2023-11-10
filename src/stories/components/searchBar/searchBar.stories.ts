@@ -18,7 +18,7 @@ export const Default: Story = {
   args: {
     placeholder: 'Genel Bakış',
     endLetter: 'K',
-    startIcon: 'magnifyingGlass',
-    endIcon: 'command',
+    startIcon: 'MagnifyingGlass',
+    endIcon: 'CommandSolid',
   },
 }
