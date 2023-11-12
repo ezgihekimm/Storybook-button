@@ -20,8 +20,8 @@ export const Filled: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: 'paperAirplane',
-    IconLoadingSource: 'loading',
+    IconSource: 'PaperAirplane',
+    IconLoadingSource: 'LoadingSolid',
     loading: false,
   },
 }
@@ -33,8 +33,8 @@ export const Pill: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: 'paperAirplane',
-    IconLoadingSource: 'loading',
+    IconSource: 'PaperAirplane',
+    IconLoadingSource: 'LoadingSolid',
   },
 }
 export const Outline: Story = {
@@ -44,8 +44,8 @@ export const Outline: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: 'paperAirplane',
-    IconLoadingSource: 'loading',
+    IconSource: 'PaperAirplane',
+    IconLoadingSource: 'LoadingSolid',
   },
 }
 
@@ -56,7 +56,7 @@ export const Link: Story = {
     label: 'Button',
     iconPosition: 'none',
     disabled: false,
-    IconSource: 'paperAirplane',
-    IconLoadingSource: 'loading',
+    IconSource: 'PaperAirplane',
+    IconLoadingSource: 'LoadingSolid',
   },
 }

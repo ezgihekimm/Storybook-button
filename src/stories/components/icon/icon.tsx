@@ -325,6 +325,15 @@ export type IconType =
   | 'CommandSolid'
   | 'ConvertSolid'
   | 'CursorArrowRaysSolid'
+  | 'ChevronDownSolid'
+  | 'ChevronLeftSolid'
+  | 'ChevronRightSolid'
+  | 'ChevronUpSolid'
+  | 'CircleStackSolid'
+  | 'Cog6ToothSolid'
+  | 'CommunicationSolid'
+  | 'ConvertSolid'
+  | 'DialogueSolid'
   | 'DevicePhoneMobileSolid'
   | 'DocumentArrowDownSolid'
   | 'DocumentCheckSolid'
@@ -356,6 +365,7 @@ export type IconType =
   | 'LinkSolid'
   | 'LinkedinSolid'
   | 'LockClosedSolid'
+  | 'LoadingSolid'
   | 'MagnifyingGlassMinusSolid'
   | 'MagnifyingGlassPlusSolid'
   | 'MagnifyingGlassSolid'
@@ -392,21 +402,6 @@ export type IconType =
   | 'XCircleSolid'
   | 'XMarkSolid'
   | 'YoutubeSolid'
-
-export interface IconProps {
-  type?: IconType
-  width?: number
-  height?: number
-  className?: string
-}
-
-export const Icon: React.FC<IconProps> = (props) => {
-  const { type, width, height, className } = props
-  const Newicon = type ? iconMap[type] : null
-  return Newicon ? (
-    <Newicon width={width} height={height} className={className} type={type} />
-  ) : null
-}
 
 const iconMap: Record<IconType, any> = {
   AcademicCap,
@@ -581,6 +576,20 @@ const iconMap: Record<IconType, any> = {
   WalletSolid,
   XCircleSolid,
   YoutubeSolid,
+}
+export interface IconProps {
+  type?: IconType
+  width?: number
+  height?: number
+  className?: string
+}
+
+export const Icon: React.FC<IconProps> = (props) => {
+  const { type, width, height, className } = props
+  const Newicon = type ? iconMap[type] : null
+  return Newicon ? (
+    <Newicon width={width} height={height} className={className} type={type} />
+  ) : null
 }
 
 export default Icon

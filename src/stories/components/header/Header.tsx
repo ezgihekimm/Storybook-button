@@ -1,14 +1,14 @@
 import clsx from 'clsx'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
-import chevronDown from '../../assets/IconSet/chevron-down.svg'
 import { Button } from '../button/Button'
-import { IconType, renderIcon } from '../icon/icon'
+import Icon, { IconType } from '../icon/icon'
 import { SearchBar } from '../searchBar/searchBar'
 import { Text } from '../text/Text'
 import './header.scss'
 
 export default interface HeaderProps {
-  logo?: IconType
+  logo?: StaticImport
   firstIcon?: IconType
   secondIcon?: IconType
   thirdIcon?: IconType
@@ -43,26 +43,21 @@ export const Header = (props: HeaderProps) => {
     blueBox,
     blueBoxText,
   } = props
-  const FirstIcon = firstIcon ? renderIcon(firstIcon) : null
-  const SecondIcon = secondIcon ? renderIcon(secondIcon) : null
-  const ThirdIcon = thirdIcon ? renderIcon(thirdIcon) : null
-  const EndIcon = endIcon ? renderIcon(endIcon) : null
-  const Logo = logo ? renderIcon(logo) : null
   return (
     <div className={clsx('header')}>
       <div className="column">
-        {logo && <Image src={Logo} alt="logo" />}
+        {logo && <Image src={logo} alt="logo" />}
         <div className="vl"></div>
         <Text textSize="xl" weight="medium">
           {dropDownText}
         </Text>
         {blueBox && <div className="blue-box">{blueBoxText}</div>}
         <button className="drop">
-          <Image src={chevronDown} alt="chevronDown" width={24} height={24} />
+          <Icon type="ChevronDownSolid" />
         </button>
         {searchBar && (
           <div className="ml-8">
-            <SearchBar startIcon="magnifyingGlass" endIcon="command" />
+            <SearchBar startIcon="MagnifyingGlass" endIcon="CommandSolid" />
           </div>
         )}
       </div>
@@ -70,18 +65,18 @@ export const Header = (props: HeaderProps) => {
         <Button label={buttonText} onClick={buttonClick} />
         <div className="sub-col-right">
           <button className="circle" onClick={firstIconClick}>
-            <Image src={FirstIcon} alt="firstIcon" width={24} height={24} />
+            <Icon type={firstIcon} />
           </button>
           <button className="circle" onClick={secondIconClick}>
-            <Image src={SecondIcon} alt="secondIcon" width={24} height={24} />
+            <Icon type={secondIcon} />
           </button>
           <button className="circle" onClick={thirdIconClick}>
-            <Image src={ThirdIcon} alt="thirdIcon" width={24} height={24} />
+            <Icon type={thirdIcon} />
           </button>
         </div>
         <div className="vl"></div>
         <button className="circle" onClick={endIconClick}>
-          <Image src={EndIcon} alt="endIcon" width={24} height={24} />
+          <Icon type={endIcon} />
         </button>
       </div>
     </div>
