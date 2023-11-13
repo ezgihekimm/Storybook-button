@@ -1,6 +1,8 @@
+import { BadgeType } from '@/lib/types'
 import clsx from 'clsx'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
+import { Badge } from '../badges/badge'
 import { Button } from '../button/Button'
 import Icon, { IconType } from '../icon/icon'
 import { SearchBar } from '../searchBar/searchBar'
@@ -16,8 +18,8 @@ export default interface HeaderProps {
   buttonText?: string
   dropDownText?: string
   searchBar?: boolean
-  blueBox?: boolean
-  blueBoxText?: string
+  badge?: boolean
+  badgeType?: BadgeType
   buttonClick?: () => void
   firstIconClick?: () => void
   secondIconClick?: () => void
@@ -40,8 +42,8 @@ export const Header = (props: HeaderProps) => {
     thirdIconClick,
     endIconClick,
     searchBar,
-    blueBox,
-    blueBoxText,
+    badge,
+    badgeType,
   } = props
   return (
     <div className={clsx('header')}>
@@ -51,7 +53,9 @@ export const Header = (props: HeaderProps) => {
         <Text textSize="xl" weight="medium">
           {dropDownText}
         </Text>
-        {blueBox && <div className="blue-box">{blueBoxText}</div>}
+        <div className="ml-2 mr-1">
+          {badge && <Badge type={badgeType}>Beta</Badge>}
+        </div>
         <button className="drop">
           <Icon type="ChevronDownSolid" />
         </button>
@@ -76,7 +80,7 @@ export const Header = (props: HeaderProps) => {
         </div>
         <div className="vl"></div>
         <button className="circle" onClick={endIconClick}>
-          <Icon type={endIcon} />
+          <Icon type={endIcon} className="text-secondary-500" />
         </button>
       </div>
     </div>

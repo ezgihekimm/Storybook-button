@@ -13,3 +13,10 @@ export type TextSize =
   | '5xl'
   | '6xl'
 export type Weight = 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
+export type IconSize = 'xs' | 'sm' | 'md' | 'lg'
+export type BadgeType =
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'danger'
+  | 'warning'

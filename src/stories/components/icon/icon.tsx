@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+import { IconSize } from '../../../lib/types'
 import ExclaimationCircle from '../../assets/IconSet/Outline/exclaimation-circle.svg'
 import AcademicCap from '../../assets/Iconset/Outline/academic-cap.svg'
 import AdjustmentsHorizontal from '../../assets/Iconset/Outline/adjustments-horizontal.svg'
@@ -579,16 +581,15 @@ const iconMap: Record<IconType, any> = {
 }
 export interface IconProps {
   type?: IconType
-  width?: number
-  height?: number
+  size?: IconSize
   className?: string
 }
 
 export const Icon: React.FC<IconProps> = (props) => {
-  const { type, width, height, className } = props
+  const { type, size, className } = props
   const Newicon = type ? iconMap[type] : null
   return Newicon ? (
-    <Newicon width={width} height={height} className={className} type={type} />
+    <Newicon className={clsx(className, `icon-${size}`)} type={type} />
   ) : null
 }
 

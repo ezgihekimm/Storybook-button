@@ -1,0 +1,17 @@
+.icon {
+  &-xs {
+    @apply m-w-[12px] m-h-[12px] h-3 w-3;
+  }
+  &-sm {
+    @apply h-4 w-4;
+  }
+  &-md {
+    @apply h-5 w-5;
+  }
+  &-lg {
+    @apply h-6 w-6;
+  }
+  &-xl {
+    @apply h-9 w-9;
+  }
+}

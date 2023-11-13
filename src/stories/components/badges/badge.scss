@@ -1,0 +1,21 @@
+.badge {
+  @apply flex items-center justify-center rounded-lg pb-1 pe-2 ps-2 pt-1 text-xs;
+}
+
+.badge {
+  &-primary {
+    @apply bg-primary-blue-50 text-primary-blue-500;
+  }
+  &-secondary {
+    @apply bg-secondary-blue-50 text-secondary-blue-500;
+  }
+  &-success {
+    @apply bg-green-50 text-green-500;
+  }
+  &-danger {
+    @apply bg-red-50 text-red-600;
+  }
+  &-warning {
+    @apply bg-yellow-50 text-yellow-600;
+  }
+}
