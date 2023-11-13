@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { IconSize } from '../../../lib/types'
+import AcademicCap from '../../assets/IconSet/Outline/academic-cap.svg'
 import ExclaimationCircle from '../../assets/IconSet/Outline/exclaimation-circle.svg'
-import AcademicCap from '../../assets/Iconset/Outline/academic-cap.svg'
 import AdjustmentsHorizontal from '../../assets/Iconset/Outline/adjustments-horizontal.svg'
 import ArchiveBoxXMark from '../../assets/Iconset/Outline/archive-box-x-mark.svg'
 import ArrowDownLeft from '../../assets/Iconset/Outline/arrow-down-left.svg'
