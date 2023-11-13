@@ -1,6 +1,5 @@
 import clsx from 'clsx'
-import Image from 'next/image'
-import { IconType, renderIcon } from '../icon/icon'
+import Icon, { IconType } from '../icon/icon'
 import './menu.scss'
 export default interface MenuProps {
   label?: string
@@ -11,14 +10,12 @@ export default interface MenuProps {
 
 export const Menu = (props: MenuProps) => {
   const { label = 'Genel Bakış', actived, icon, activedIcon } = props
-  const active = activedIcon ? renderIcon(activedIcon) : null
-  const baseIcon = icon ? renderIcon(icon) : null
   return (
     <div className={clsx('menu', actived ? 'actived' : '')}>
       {actived ? (
-        <Image src={active} alt="activedIcon" width={24} height={24} />
+        <Icon type={activedIcon} className="fill-primary-blue-500" />
       ) : (
-        <Image src={baseIcon} width={24} height={24} alt="baseIcon" />
+        <Icon type={icon} />
       )}
       {label}
     </div>

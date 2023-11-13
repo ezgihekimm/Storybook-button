@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Logo from '../../assets/logo1.svg'
+import Logo from '../../assets/logo.png'
 import { Header } from './Header'
 
 const meta = {
