@@ -16,8 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    width: 24,
-    height: 24,
     type: 'AcademicCap',
+    size: 'md',
   },
 }

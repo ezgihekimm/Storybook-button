@@ -1,3 +1,6 @@
 [build]
   command = "yarn build-storybook"
   publish = "storybook-static"
+
+[[plugins]]
+  package = "babel-plugin-inline-react-svg"

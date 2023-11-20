@@ -172,6 +172,7 @@ import UserSolid from '../../assets/Iconset/Solid/user.svg'
 import WalletSolid from '../../assets/Iconset/Solid/wallet.svg'
 import XCircleSolid from '../../assets/Iconset/Solid/x-circle.svg'
 import YoutubeSolid from '../../assets/Iconset/Solid/youtube.svg'
+import './icon.scss'
 
 export type IconType =
   | 'AcademicCap'
@@ -640,10 +641,10 @@ export interface IconProps {
 }
 
 export const Icon: React.FC<IconProps> = (props) => {
-  const { type, size, className } = props
+  const { type, size = 'md', className } = props
   const Newicon = type ? iconMap[type] : null
   return Newicon ? (
-    <Newicon className={clsx(className, `icon-${size}`)} type={type} />
+    <Newicon className={clsx(className, `icon-${size}`, 'text-red-500')} />
   ) : null
 }
 
