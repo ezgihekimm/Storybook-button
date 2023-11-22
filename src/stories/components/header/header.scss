@@ -10,9 +10,6 @@
 .sub-col-right {
   @apply ml-4 flex flex-row gap-2;
 }
-.blue-box {
-  @apply ml-3 mr-2  flex  justify-center rounded-lg bg-primary-blue-50 pb-1 pe-2 ps-2 pt-1 text-primary-blue-500;
-}
 .circle {
   @apply flex items-center justify-center gap-2 rounded-full bg-neutral-300 p-2;
   &:active {

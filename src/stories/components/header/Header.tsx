@@ -61,26 +61,26 @@ export const Header = (props: HeaderProps) => {
         </button>
         {searchBar && (
           <div className="ml-8">
-            <SearchBar startIcon="MagnifyingGlass" endIcon="CommandSolid" />
+            <SearchBar startIcon="MagnifyingGlass" endIcon="SupportSolid" />
           </div>
         )}
       </div>
       <div className="column">
-        <Button label={buttonText} onClick={buttonClick} />
+        <Button label={buttonText} onClick={buttonClick} size="md" />
         <div className="sub-col-right">
           <button className="circle" onClick={firstIconClick}>
-            <Icon type={firstIcon} />
+            <Icon type={firstIcon} size="md" color="secondary" />
           </button>
           <button className="circle" onClick={secondIconClick}>
-            <Icon type={secondIcon} />
+            <Icon type={secondIcon} size="md" color="secondary" />
           </button>
           <button className="circle" onClick={thirdIconClick}>
-            <Icon type={thirdIcon} />
+            <Icon type={thirdIcon} size="md" color="secondary" />
           </button>
         </div>
         <div className="vl"></div>
         <button className="circle" onClick={endIconClick}>
-          <Icon type={endIcon} className="text-secondary-500" />
+          <Icon type={endIcon} size="md" color="secondary" />
         </button>
       </div>
     </div>
