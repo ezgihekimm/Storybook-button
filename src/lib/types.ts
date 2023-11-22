@@ -20,3 +20,5 @@ export type BadgeType =
   | 'success'
   | 'danger'
   | 'warning'
+
+export type Color = 'primary' | 'secondary' | 'dark' | 'neutral'

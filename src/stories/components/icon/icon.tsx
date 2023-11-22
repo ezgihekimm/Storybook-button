@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { IconSize } from '../../../lib/types'
+import { Color, IconSize } from '../../../lib/types'
 import AcademicCap from '../../assets/IconSet/Outline/academic-cap.svg'
 import AdjustmentsHorizontal from '../../assets/IconSet/Outline/adjustments-horizontal.svg'
 import ArchiveBoxXMark from '../../assets/IconSet/Outline/archive-box-x-mark.svg'
@@ -125,7 +125,7 @@ import ChevronLeftSolid from '../../assets/Iconset/Solid/chevron-left.svg'
 import ChevronRightSolid from '../../assets/Iconset/Solid/chevron-right.svg'
 import ChevronUpSolid from '../../assets/Iconset/Solid/chevron-up.svg'
 import CircleStackSolid from '../../assets/Iconset/Solid/circle-stack.svg'
-import Cog6ToothSolid from '../../assets/Iconset/Solid/cog-6-tooth.svg'
+import CogToothSolid from '../../assets/Iconset/Solid/cog-6-tooth.svg'
 import CommandSolid from '../../assets/Iconset/Solid/command.svg'
 import CommunicationSolid from '../../assets/Iconset/Solid/communication.svg'
 import ConvertSolid from '../../assets/Iconset/Solid/convert.svg'
@@ -323,7 +323,7 @@ export type IconType =
   | 'CircleStackSlashSolid'
   | 'CircleStackSolid'
   | 'ClockSolid'
-  | 'Cog6ToothSolid'
+  | 'CogToothSolid'
   | 'CommunicationSolid'
   | 'CommandSolid'
   | 'ConvertSolid'
@@ -532,7 +532,7 @@ const iconMap: Record<IconType, any> = {
   ChevronRightSolid,
   ChevronUpSolid,
   CircleStackSolid,
-  Cog6ToothSolid,
+  CogToothSolid,
   CommandSolid,
   CommunicationSolid,
   ConvertSolid,
@@ -579,7 +579,6 @@ const iconMap: Record<IconType, any> = {
   WalletSolid,
   XCircleSolid,
   YoutubeSolid,
-  CoghTooth: undefined,
   AcademicCapSolid: undefined,
   AdjustmentsHorizontalSolid: undefined,
   ArchiveBoxXMarkSolid: undefined,
@@ -637,14 +636,14 @@ const iconMap: Record<IconType, any> = {
 export interface IconProps {
   type?: IconType
   size?: IconSize
-  className?: string
+  color?: Color
 }
 
 export const Icon: React.FC<IconProps> = (props) => {
-  const { type, size = 'md', className } = props
+  const { type, size = 'md', color } = props
   const Newicon = type ? iconMap[type] : null
   return Newicon ? (
-    <Newicon className={clsx(className, `icon-${size}`, 'text-red-500')} />
+    <Newicon className={clsx(`icon-${size}`, `text-${color}`)} />
   ) : null
 }
 

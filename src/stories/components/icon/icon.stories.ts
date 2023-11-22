@@ -16,7 +16,8 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    type: 'AcademicCap',
+    type: 'ArrowDown',
     size: 'md',
+    color: 'neutral',
   },
 }

@@ -15,3 +15,18 @@
     @apply h-9 w-9;
   }
 }
+
+.text {
+  &-primary {
+    @apply text-primary-blue-500;
+  }
+  &-secondary {
+    @apply text-secondary-blue-400;
+  }
+  &-dark {
+    @apply text-dark-300;
+  }
+  &-neutral {
+    @apply text-neutral-700;
+  }
+}
