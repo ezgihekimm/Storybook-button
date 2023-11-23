@@ -1,11 +1,26 @@
 .header {
   @apply flex w-screen flex-row justify-between pb-3 pe-6 ps-6 pt-3;
 }
+.hamburger-menu {
+  @apply sm:block md:hidden;
+}
+.mobile-logo {
+  @apply hidden;
+}
+.base-logo {
+  @apply md:block;
+}
 .vl {
   @apply ml-4 mr-4 flex h-[30px] border-r-[1px] border-neutral-500;
 }
-.column {
-  @apply flex items-center;
+.column-left {
+  @apply flex flex-row items-center;
+}
+.column-right {
+  @apply hidden items-center sm:hidden md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row;
+}
+.searchBar {
+  @apply ml-8 hidden lg:block;
 }
 .sub-col-right {
   @apply ml-4 flex flex-row gap-2;
@@ -20,7 +35,4 @@
   &:focus {
     @apply rotate-180 transition duration-100 ease-in-out;
   }
-}
-.color {
-  color: blue;
 }

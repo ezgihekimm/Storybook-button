@@ -19,6 +19,6 @@ export const Default: Story = {
     placeholder: 'Genel Bakış',
     endLetter: 'K',
     startIcon: 'MagnifyingGlass',
-    endIcon: 'SupportSolid',
+    endIcon: 'Command',
   },
 }

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/Logo (Resize).svg'
+import MobileLogo from '../../assets/MobilLogo.svg'
 import { Header } from './Header'
 
 const meta = {
@@ -27,5 +28,6 @@ export const Default: Story = {
     secondIcon: 'Bell',
     thirdIcon: 'QuestionMarkCircle',
     endIcon: 'User',
+    mobileLogo: MobileLogo,
   },
 }

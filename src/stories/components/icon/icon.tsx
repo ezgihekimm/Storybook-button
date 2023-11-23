@@ -39,6 +39,7 @@ import CircleStackSlash from '../../assets/IconSet/Outline/circle-stack-slash.sv
 import CircleStack from '../../assets/IconSet/Outline/circle-stack.svg'
 import Clock from '../../assets/IconSet/Outline/clock.svg'
 import CogTooth from '../../assets/IconSet/Outline/cog-6-tooth.svg'
+import Command from '../../assets/IconSet/Outline/command.svg'
 import Communication from '../../assets/IconSet/Outline/communication.svg'
 import Convert from '../../assets/IconSet/Outline/convert.svg'
 import CursorArrowRays from '../../assets/IconSet/Outline/cursor-arrow-rays.svg'
@@ -215,6 +216,7 @@ export type IconType =
   | 'Clock'
   | 'CogTooth'
   | 'Communication'
+  | 'Command'
   | 'Convert'
   | 'CursorArrowRays'
   | 'CoghTooth'
@@ -447,6 +449,7 @@ const iconMap: Record<IconType, any> = {
   Clock,
   CogTooth,
   Communication,
+  Command,
   Convert,
   CursorArrowRays,
   DevicePhoneMobile,
