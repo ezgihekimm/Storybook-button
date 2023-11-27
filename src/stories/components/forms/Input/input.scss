@@ -1,0 +1,19 @@
+#myInput:focus {
+  @apply outline-none;
+}
+.input-label {
+  @apply flex w-[450px] flex-row justify-between rounded-xl border-[1px] border-neutral-400 p-3 text-sm;
+}
+
+.input-label:active {
+  @apply outline outline-offset-0 outline-primary-blue-100;
+}
+.disabled {
+  @apply bg-neutral-400 text-neutral-600 outline-0 hover:bg-neutral-400 focus:border-0;
+}
+.input-error {
+  @apply border-[1px] border-red-200 shadow-lg shadow-red-200;
+}
+.custom-box-shadow {
+  box-shadow: 0px 0px 0px 2px #fae9eb;
+}
