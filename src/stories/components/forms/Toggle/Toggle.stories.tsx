@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Toggle } from './Toggle'
 
 const meta = {
-  title: 'Forms/Toogle',
+  title: 'Forms/Toggle',
   component: Toggle,
   parameters: {
     layout: 'centered',
