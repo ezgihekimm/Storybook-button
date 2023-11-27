@@ -18,7 +18,7 @@ export const Toggle = (props: ToogleProps) => {
   }
 
   return (
-    <div className="flex items-center">
+    <div className="toggle-box">
       <label className="switch">
         <input
           type="checkbox"
@@ -29,11 +29,9 @@ export const Toggle = (props: ToogleProps) => {
         <span className="slider round"></span>
       </label>
       <span
-        className={clsx(
-          'ml-2',
-          `${disabled ? 'text-neutral-600' : 'text-neutral-800'}`,
-          { 'text-neutral-400': isChecked },
-        )}
+        className={clsx('ml-2', `${disabled ? 'text-neutral-600' : ''}`, {
+          'text-neutral-400': isChecked,
+        })}
       >
         {label}
       </span>
