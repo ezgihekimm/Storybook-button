@@ -1,0 +1,37 @@
+.switch {
+  @apply relative inline-block h-[20px] w-[36px];
+}
+.switch input {
+  @apply h-0 w-0 opacity-0;
+}
+.slider {
+  @apply absolute bottom-0 left-0 right-0 top-0 cursor-pointer bg-gray-300 transition duration-300;
+}
+.slider:before {
+  @apply absolute bottom-1 left-1 h-[13px] w-[13px] bg-white transition duration-300 content-none;
+}
+.slider:before {
+  content: '';
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  @apply bg-primary-blue-500;
+}
+
+input:focus + .slider {
+  @apply outline outline-2 outline-offset-0 outline-primary-blue-100;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.slider.round {
+  @apply rounded-full;
+}
+.slider.slider.round:before {
+  @apply rounded-full;
+}
