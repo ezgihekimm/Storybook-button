@@ -32,7 +32,7 @@ export const Toggle = (props: ToogleProps) => {
         className={clsx(
           'ml-2',
           `${disabled ? 'text-neutral-600' : 'text-neutral-800'}`,
-          { 'text-neutral-500': isChecked }, // Eğer checked ise line-through ekle
+          { 'text-neutral-400': isChecked },
         )}
       >
         {label}

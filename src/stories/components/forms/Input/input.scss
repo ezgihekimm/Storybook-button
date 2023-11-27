@@ -2,10 +2,10 @@
   @apply outline-none;
 }
 #myInput {
-  @apply dark:bg-dark-900;
+  @apply text-secondary-blue-500 dark:bg-dark-900;
 }
 .input-label {
-  @apply flex w-[450px] flex-row justify-between rounded-lg border-[1px] border-neutral-400 p-3 text-sm dark:border-dark-600;
+  @apply flex w-[450px] flex-row justify-between rounded-lg border-[1px] border-neutral-400 p-3 text-sm  dark:border-dark-600;
 }
 .input-label:active {
   @apply outline outline-offset-0 outline-primary-blue-100;
