@@ -9,17 +9,18 @@ export interface CheckboxProps {
 
 export const Checkbox = (props: CheckboxProps) => {
   const { label, disabled, type } = props
+
   return (
-    <label className="flex items-center">
+    <div className="flex items-center">
       <input type={type} disabled={disabled} className="checkbox h-4 w-4" />
       <span
         className={clsx(
-          'ml-2',
+          'label',
           `${disabled ? 'text-neutral-600' : 'text-neutral-800'}`,
         )}
       >
         {label}
       </span>
-    </label>
+    </div>
   )
 }

@@ -1,3 +1,6 @@
 .checkbox {
-  @apply outline-2 outline-offset-0 outline-primary-blue-100 focus:outline;
+  @apply cursor-pointer outline-2 outline-offset-0 outline-primary-blue-100 focus:outline;
+}
+.label {
+  @apply ml-2 select-none;
 }

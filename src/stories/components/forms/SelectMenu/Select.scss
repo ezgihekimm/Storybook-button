@@ -1,0 +1,16 @@
+.select-box {
+  @apply relative inline-block;
+}
+
+.drowDown {
+  @apply absolute w-[426px] rounded-lg border border-neutral-300 bg-white shadow-lg;
+}
+.dropDown-option {
+  @apply px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 hover:text-primary-blue-500;
+}
+.dropDown {
+  box-shadow: 0px 2px 8px 0px rgba(37, 36, 92, 0.1);
+}
+.disabled {
+  @apply cursor-not-allowed bg-neutral-200;
+}

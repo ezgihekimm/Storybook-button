@@ -18,7 +18,7 @@
 
 .text {
   &-primary {
-    @apply text-primary-blue-500;
+    @apply fill-primary-blue-500 text-primary-blue-500;
   }
   &-secondary {
     @apply text-secondary-blue-500;
@@ -27,6 +27,6 @@
     @apply text-dark-300;
   }
   &-neutral {
-    @apply text-neutral-700;
+    @apply fill-neutral-600 text-neutral-600;
   }
 }
