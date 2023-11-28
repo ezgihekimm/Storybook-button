@@ -1,0 +1,9 @@
+#myTextarea:focus {
+  @apply outline-none;
+}
+#myTextarea {
+  @apply w-full text-secondary-blue-500 dark:bg-dark-900;
+}
+.text-box {
+  @apply flex min-h-[80px] w-[450px] flex-row justify-between rounded-lg border-[1px] border-neutral-400 p-3 text-sm  dark:border-dark-600;
+}

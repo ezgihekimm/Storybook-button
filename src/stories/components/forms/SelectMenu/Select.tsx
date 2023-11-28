@@ -14,7 +14,7 @@ export const SelectMenu = (props: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState('')
 
-  const handleToggle = () => {
+  const handleSelect = () => {
     if (!disabled) {
       setIsOpen(!isOpen)
     }
@@ -26,7 +26,7 @@ export const SelectMenu = (props: SelectProps) => {
 
   return (
     <div className={clsx('select-box', `${disabled ? 'disabled' : ''}`)}>
-      <button className="text-neutral-800" onClick={handleToggle}>
+      <button className="text-neutral-800" onClick={handleSelect}>
         <Input
           placeholder={placeholder}
           value={selectedOption}
