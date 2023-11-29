@@ -1,0 +1,42 @@
+.file-box {
+  @apply flex flex-row items-center justify-between rounded-lg border-[1px] border-neutral-400 px-1 py-1 text-sm  dark:border-dark-600;
+}
+#myFile:focus {
+  @apply outline-none;
+}
+#myFile {
+  @apply text-neutral-600 dark:bg-dark-900;
+}
+#myFile::-webkit-file-upload-button {
+  @apply hidden;
+}
+.file-button {
+  @apply mr-3 flex cursor-pointer flex-row items-center rounded-md bg-neutral-400 px-3 py-[10px];
+}
+.file-label {
+  @apply ml-2 text-secondary-blue-500;
+}
+
+.file-selected {
+  .icon-box {
+    @apply hidden;
+  }
+  .file-label {
+    @apply ml-0;
+  }
+  .description {
+    @apply hidden;
+  }
+}
+.description {
+  @apply mt-1 text-xs text-neutral-700;
+}
+.title {
+  @apply mb-1 text-sm text-neutral-800;
+}
+.error-text {
+  @apply mt-1 text-sm text-red-500;
+}
+.input-error {
+  @apply border-[1px] border-red-200 shadow-lg shadow-red-200;
+}
