@@ -1,8 +1,8 @@
 .select-box {
-  @apply relative inline-block;
+  @apply relative inline-block w-full;
 }
 .drowDown {
-  @apply absolute w-[426px] rounded-lg border border-neutral-300 bg-white shadow-lg;
+  @apply absolute w-full rounded-lg border border-neutral-300 bg-white shadow-lg;
 }
 .dropDown-option {
   @apply px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 hover:text-primary-blue-500;

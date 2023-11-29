@@ -7,10 +7,11 @@ export interface SelectProps {
   placeholder?: string
   options?: string[]
   disabled?: boolean
+  title?: string
 }
 
 export const SelectMenu = (props: SelectProps) => {
-  const { placeholder, options, disabled } = props
+  const { placeholder, options, disabled, title } = props
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState('')
 
@@ -26,6 +27,7 @@ export const SelectMenu = (props: SelectProps) => {
 
   return (
     <div className={clsx('select-box', `${disabled ? 'disabled' : ''}`)}>
+      {title && <div className="title">{title}</div>}
       <button className="text-neutral-800" onClick={handleSelect}>
         <Input
           placeholder={placeholder}
