@@ -12,13 +12,8 @@ export const Checkbox = (props: CheckboxProps) => {
 
   return (
     <div className="flex items-center">
-      <input type={type} disabled={disabled} className="checkbox h-4 w-4" />
-      <span
-        className={clsx(
-          'label',
-          `${disabled ? 'text-neutral-600' : 'text-neutral-800'}`,
-        )}
-      >
+      <input type={type} disabled={disabled} id="#check" className="checkbox" />
+      <span className={clsx('label', `${disabled ? 'disabled' : ''}`)}>
         {label}
       </span>
     </div>

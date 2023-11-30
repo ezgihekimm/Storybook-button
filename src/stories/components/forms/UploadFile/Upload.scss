@@ -1,5 +1,5 @@
 .file-box {
-  @apply flex flex-row items-center justify-between rounded-lg border-[1px] border-neutral-400 px-1 py-1 text-sm  dark:border-dark-600;
+  @apply flex flex-row items-center justify-between rounded-lg border-[1px] border-neutral-400 px-1 py-1 text-sm dark:border-dark-600  dark:bg-dark-900;
 }
 #myFile:focus {
   @apply outline-none;
@@ -11,10 +11,10 @@
   @apply hidden;
 }
 .file-button {
-  @apply mr-3 flex cursor-pointer flex-row items-center rounded-md bg-neutral-400 px-3 py-[10px];
+  @apply mr-3 flex cursor-pointer flex-row items-center rounded-md bg-neutral-400 px-3 py-[10px] dark:bg-dark-700;
 }
 .file-label {
-  @apply ml-2 text-secondary-blue-500;
+  @apply dark:text-dark-50 ml-2 text-secondary-blue-500;
 }
 
 .file-selected {

@@ -28,7 +28,7 @@ export const SelectMenu = (props: SelectProps) => {
   return (
     <div className={clsx('select-box', `${disabled ? 'disabled' : ''}`)}>
       {title && <div className="title">{title}</div>}
-      <button className="text-neutral-800" onClick={handleSelect}>
+      <button onClick={handleSelect}>
         <Input
           placeholder={placeholder}
           value={selectedOption}

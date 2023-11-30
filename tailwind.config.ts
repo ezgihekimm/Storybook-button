@@ -88,6 +88,7 @@ const config: Config = {
           '900': '#AC5509',
         },
         dark: {
+          '50': '#DFDFF1',
           '200': '#F8F9FC',
           '300': '#E8EAEE',
           '400': '#C3C5CB',

@@ -1,6 +1,15 @@
 .checkbox {
-  @apply cursor-pointer outline-2 outline-offset-0 outline-primary-blue-100 focus:outline;
+  @apply h-4 w-4 cursor-pointer;
+}
+.checkbox:active {
+  @apply outline-2 outline-offset-0 outline-primary-blue-100 focus:outline;
 }
 .label {
-  @apply ml-2 select-none;
+  @apply ml-2 select-none text-neutral-800 dark:text-dark-300;
+}
+.disabled {
+  @apply text-neutral-800;
+}
+input[type='radio']:active {
+  @apply outline-2 outline-offset-0 outline-primary-blue-100 focus:outline;
 }
