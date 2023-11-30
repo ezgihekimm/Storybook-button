@@ -22,7 +22,7 @@ export const UploadFile = (props: UploadFileProps) => {
       <div
         className={clsx(
           'file-box',
-          `${error ? 'input-error' : ''}`,
+          `${error ? 'file-error' : ''}`,
           `${error ? 'custom-box-shadow' : ''}`,
         )}
       >

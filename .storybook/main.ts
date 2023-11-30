@@ -1,9 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs'
 
-const {
-  patchWebpackConfig,
-} = require('storybook-addon-live-examples/dist/cjs/utils')
-
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
@@ -35,10 +31,5 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {},
-  webpackFinal: (config) => {
-    patchWebpackConfig(config)
-
-    return config
-  },
 }
 export default config

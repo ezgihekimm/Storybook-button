@@ -37,6 +37,6 @@
 .error-text {
   @apply mt-1 text-sm text-red-500;
 }
-.input-error {
-  @apply border-[1px] border-red-200 shadow-lg shadow-red-200;
+.file-error {
+  @apply border-[1px] border-red-200;
 }
