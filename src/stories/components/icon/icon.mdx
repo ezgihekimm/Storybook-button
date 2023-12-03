@@ -1,0 +1,34 @@
+import {
+  Meta,
+  Controls,
+  Canvas,
+  Source,
+  Story,
+  Stories,
+} from '@storybook/blocks'
+import { IconGallery, IconItem } from '@storybook/blocks'
+import Icon, { IconType, iconTypes } from './icon'
+import * as IconStories from './icon.stories'
+import './icon.scss'
+
+<Meta title="Example/Icon" component={Icon} of={IconStories} />
+
+# Icons
+
+<Canvas>
+
+</Canvas>
+
+<Controls />
+
+## List of all icons
+
+{' '}
+
+<IconGallery>
+  {iconTypes.map((type) => (
+    <IconItem key={type} name={type}>
+      <Icon type={type} color="secondary" size="lg" />
+    </IconItem>
+  ))}
+</IconGallery>

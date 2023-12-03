@@ -1,5 +1,9 @@
 .menu {
-  @apply flex flex-row gap-3 rounded-lg py-3 pe-16 ps-4 font-archivo font-medium text-neutral-800 hover:bg-neutral-100;
+  @apply flex w-[228px] flex-row gap-3 rounded-lg px-4 py-3 font-archivo font-medium text-neutral-800 hover:bg-neutral-100;
+}
+
+.menu:active {
+  @apply bg-neutral-100 text-secondary-blue-500;
 }
 .actived {
   @apply bg-neutral-100 text-secondary-blue-500;

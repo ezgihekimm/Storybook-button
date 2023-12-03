@@ -13,9 +13,9 @@ export const Menu = (props: MenuProps) => {
   return (
     <div className={clsx('menu', actived ? 'actived' : '')}>
       {actived ? (
-        <Icon type={activedIcon} className="fill-primary-blue-500" />
+        <Icon type={activedIcon} size="lg" color="primary" />
       ) : (
-        <Icon type={icon} />
+        <Icon type={icon} size="lg" />
       )}
       {label}
     </div>

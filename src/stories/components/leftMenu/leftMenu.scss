@@ -1,0 +1,10 @@
+.left-menu {
+  @apply flex h-[568px]  flex-col justify-between p-4;
+}
+.col-top {
+  @apply flex flex-col gap-2;
+}
+
+.col-bottom {
+  @apply flex flex-row justify-center gap-1;
+}

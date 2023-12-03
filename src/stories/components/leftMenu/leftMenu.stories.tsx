@@ -1,22 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Icon } from './icon'
+import { LeftMenu } from './leftMenu'
 
 const meta = {
-  title: 'Example/Icon',
-  component: Icon,
+  title: 'Example/LeftMenu',
+  component: LeftMenu,
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Icon>
+  tags: ['autodocs'],
+} satisfies Meta<typeof LeftMenu>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  args: {
-    type: 'ArrowDown',
-    size: 'md',
-    color: 'neutral',
-  },
+  args: {},
 }
