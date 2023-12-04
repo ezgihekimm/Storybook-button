@@ -1,22 +1,39 @@
+import { IconType } from '../icon/icon'
 import { Menu } from '../menu/Menu'
 import { Text } from '../text/Text'
 import './leftMenu.scss'
 
-export const LeftMenu = () => {
+export interface LeftMenuProps {
+  topMenuItems: {
+    icon?: IconType
+    label?: string
+    activedIcon?: IconType
+  }[]
+  bottomMenuItems: {
+    label?: string
+  }[]
+}
+
+export const LeftMenu = (props: LeftMenuProps) => {
+  const { topMenuItems, bottomMenuItems } = props
   return (
     <div className="left-menu">
       <div className="col-top">
-        <Menu icon="Home" label="Genel Bakış"></Menu>
-        <Menu icon="Wallet" label="Varlıklarım"></Menu>
-        <Menu icon="BankNotes" label="TL Yatır & Çek"></Menu>
-        <Menu icon="Convert" label="Kripto Yatır & Çek"></Menu>
-        <Menu icon="TrendingUp" label="Piyasalar"></Menu>
-        <Menu icon="LightningBolt" label="Sizin İçin"></Menu>
+        {topMenuItems.map((item, index) => (
+          <Menu
+            key={index}
+            icon={item.icon}
+            label={item.label}
+            activedIcon={item.activedIcon}
+          />
+        ))}
       </div>
       <div className="col-bottom">
-        <Text textSize="xs">Kullanım</Text>
-        <Text textSize="xs">· Gizlilik </Text>
-        <Text textSize="xs">· Denetim Raporları</Text>
+        {bottomMenuItems.map((item, index) => (
+          <Text textSize="xs" key={index}>
+            {item.label}
+          </Text>
+        ))}
       </div>
     </div>
   )

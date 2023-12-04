@@ -20,6 +20,7 @@ import ArrowUp from '../../assets/IconSet/Outline/arrow-up.svg'
 import ArrowUturnLeft from '../../assets/IconSet/Outline/arrow-uturn-left.svg'
 import ArrowsRightLeft from '../../assets/IconSet/Outline/arrows-right-left.svg'
 import ArrowsUpDown from '../../assets/IconSet/Outline/arrows-up-down.svg'
+import BankNotesActive from '../../assets/IconSet/Outline/banknotes-active.svg'
 import BankNotes from '../../assets/IconSet/Outline/banknotes.svg'
 import Bars from '../../assets/IconSet/Outline/bars-3.svg'
 import Battery from '../../assets/IconSet/Outline/battery-50.svg'
@@ -41,6 +42,7 @@ import Clock from '../../assets/IconSet/Outline/clock.svg'
 import CogTooth from '../../assets/IconSet/Outline/cog-6-tooth.svg'
 import Command from '../../assets/IconSet/Outline/command.svg'
 import Communication from '../../assets/IconSet/Outline/communication.svg'
+import ConvertActive from '../../assets/IconSet/Outline/convert-active.svg'
 import Convert from '../../assets/IconSet/Outline/convert.svg'
 import CursorArrowRays from '../../assets/IconSet/Outline/cursor-arrow-rays.svg'
 import DevicePhoneMobile from '../../assets/IconSet/Outline/device-phone-mobile.svg'
@@ -64,12 +66,14 @@ import GlobeAmericas from '../../assets/IconSet/Outline/globe-americas.svg'
 import HandThumbUp from '../../assets/IconSet/Outline/hand-thumb-up.svg'
 import Hashtag from '../../assets/IconSet/Outline/hashtag.svg'
 import History from '../../assets/IconSet/Outline/history.svg'
+import HomeActive from '../../assets/IconSet/Outline/home-active.svg'
 import Home from '../../assets/IconSet/Outline/home.svg'
 import Identification from '../../assets/IconSet/Outline/identification.svg'
 import InformationCircle from '../../assets/IconSet/Outline/information-circle.svg'
 import Instagram from '../../assets/IconSet/Outline/instagram.svg'
 import Key from '../../assets/IconSet/Outline/key.svg'
 import LightBulb from '../../assets/IconSet/Outline/light-bulb.svg'
+import LightningBoltActive from '../../assets/IconSet/Outline/lightning-bolt-active.svg'
 import LightningBolt from '../../assets/IconSet/Outline/lightning-bolt.svg'
 import Link from '../../assets/IconSet/Outline/link.svg'
 import Linkedin from '../../assets/IconSet/Outline/linkedin.svg'
@@ -98,6 +102,7 @@ import Sun from '../../assets/IconSet/Outline/sun.svg'
 import Support from '../../assets/IconSet/Outline/support.svg'
 import Telegram from '../../assets/IconSet/Outline/telegram.svg'
 import Trash from '../../assets/IconSet/Outline/trash.svg'
+import TrendingUpActive from '../../assets/IconSet/Outline/trending-up-active.svg'
 import TrendingUp from '../../assets/IconSet/Outline/trending-up.svg'
 import Twitter from '../../assets/IconSet/Outline/twitter.svg'
 import UserCircle from '../../assets/IconSet/Outline/user-circle.svg'
@@ -105,6 +110,7 @@ import UserMinus from '../../assets/IconSet/Outline/user-minus.svg'
 import UserPlus from '../../assets/IconSet/Outline/user-plus.svg'
 import User from '../../assets/IconSet/Outline/user.svg'
 import Users from '../../assets/IconSet/Outline/users.svg'
+import WalletActive from '../../assets/IconSet/Outline/wallet-active.svg'
 import Wallet from '../../assets/IconSet/Outline/wallet.svg'
 import Window from '../../assets/IconSet/Outline/window.svg'
 import XCircle from '../../assets/IconSet/Outline/x-circle.svg'
@@ -349,6 +355,12 @@ export const iconTypes: IconType[] = [
   'WalletSolid',
   'XCircleSolid',
   'YoutubeSolid',
+  'HomeActive',
+  'WalletActive',
+  'BankNotesActive',
+  'ConvertActive',
+  'TrendingUpActive',
+  'LightningBoltActive',
 ]
 
 export type IconType =
@@ -583,6 +595,12 @@ export type IconType =
   | 'XCircleSolid'
   | 'XMarkSolid'
   | 'YoutubeSolid'
+  | 'HomeActive'
+  | 'WalletActive'
+  | 'BankNotesActive'
+  | 'ConvertActive'
+  | 'TrendingUpActive'
+  | 'LightningBoltActive'
 
 const iconMap: Record<IconType, any> = {
   AcademicCap,
@@ -758,6 +776,12 @@ const iconMap: Record<IconType, any> = {
   WalletSolid,
   XCircleSolid,
   YoutubeSolid,
+  HomeActive,
+  WalletActive,
+  BankNotesActive,
+  ConvertActive,
+  TrendingUpActive,
+  LightningBoltActive,
 }
 export interface IconProps {
   type?: IconType
