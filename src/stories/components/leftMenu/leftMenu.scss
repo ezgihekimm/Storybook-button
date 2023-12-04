@@ -1,5 +1,5 @@
 .left-menu {
-  @apply flex h-[568px] flex-col justify-between p-4;
+  @apply flex h-screen w-[260px] flex-1 flex-col justify-between p-4;
 }
 .col-top {
   @apply flex flex-col gap-2;

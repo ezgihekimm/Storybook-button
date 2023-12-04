@@ -8,6 +8,8 @@ export interface LeftMenuProps {
     icon?: IconType
     label?: string
     activedIcon?: IconType
+    onClick?: () => void
+    actived?: boolean
   }[]
   bottomMenuItems: {
     label?: string
@@ -25,6 +27,8 @@ export const LeftMenu = (props: LeftMenuProps) => {
             icon={item.icon}
             label={item.label}
             activedIcon={item.activedIcon}
+            onMenuClick={item.onClick}
+            actived={item.actived}
           />
         ))}
       </div>

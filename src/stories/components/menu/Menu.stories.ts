@@ -18,7 +18,7 @@ export const Default: Story = {
   args: {
     label: 'Genel Bakış',
     icon: 'Home',
-    activedIcon: 'HomeSolid',
+    activedIcon: 'HomeActive',
     actived: false,
   },
 }

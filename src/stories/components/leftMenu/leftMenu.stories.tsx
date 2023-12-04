@@ -14,11 +14,29 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+const HomeOnClick = () => {
+  console.log('HomeOnClick')
+}
+const WalletOnClick = () => {
+  console.log('WalletOnClick')
+}
+
 export const Default: Story = {
   args: {
     topMenuItems: [
-      { icon: 'Home', label: 'Genel Bakış', activedIcon: 'HomeActive' },
-      { icon: 'Wallet', label: 'Varlıklarım', activedIcon: 'WalletActive' },
+      {
+        icon: 'Home',
+        label: 'Genel Bakış',
+        activedIcon: 'HomeActive',
+        onClick: HomeOnClick,
+        actived: true,
+      },
+      {
+        icon: 'Wallet',
+        label: 'Varlıklarım',
+        activedIcon: 'WalletActive',
+        onClick: WalletOnClick,
+      },
       {
         icon: 'BankNotes',
         label: 'TL Yatır & Çek',
