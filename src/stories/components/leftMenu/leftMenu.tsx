@@ -2,7 +2,6 @@ import { IconType } from '../icon/icon'
 import { Menu } from '../menu/Menu'
 import { Text } from '../text/Text'
 import './leftMenu.scss'
-
 export interface LeftMenuProps {
   topMenuItems: {
     icon?: IconType
@@ -18,6 +17,7 @@ export interface LeftMenuProps {
 
 export const LeftMenu = (props: LeftMenuProps) => {
   const { topMenuItems, bottomMenuItems } = props
+
   return (
     <div className="left-menu">
       <div className="col-top">

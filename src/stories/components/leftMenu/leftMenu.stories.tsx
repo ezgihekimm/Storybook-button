@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { LeftMenu } from './leftMenu'
 
 const meta = {
-  title: 'Example/LeftMenu',
+  title: 'Components/LeftMenu',
   component: LeftMenu,
   parameters: {
     layout: 'centered',
