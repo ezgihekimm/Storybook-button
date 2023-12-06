@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs'
+import path from 'path'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -7,6 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
+    '@storybook/addon-storysource',
     {
       name: '@storybook/addon-styling',
       options: {},
@@ -21,6 +23,27 @@ const config: StorybookConfig = {
         },
         sassLoaderOptions: {
           implementation: require('sass'),
+        },
+      },
+    },
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: [/\.stories\.tsx?$/],
+          include: [path.resolve(__dirname, '../src/stories/components')],
+        },
+        loaderOptions: {
+          prettierConfig: { printWidth: 80, singleQuote: false },
+        },
+      },
+    },
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        loaderOptions: {
+          parser: 'typescript',
+          prettierConfig: { printWidth: 80, singleQuote: false },
         },
       },
     },
