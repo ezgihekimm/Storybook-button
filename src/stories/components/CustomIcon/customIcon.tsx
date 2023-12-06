@@ -6,6 +6,7 @@ import Preferences from '../../assets/LightCustom/preferences.svg'
 import Referral from '../../assets/LightCustom/referral.svg'
 import Security from '../../assets/LightCustom/security.svg'
 
+import clsx from 'clsx'
 import CommercialDark from '../../assets/DarkCustom/commercial.svg'
 import IndividualDark from '../../assets/DarkCustom/individual.svg'
 import KycDark from '../../assets/DarkCustom/kyc.svg'
@@ -69,17 +70,25 @@ export interface CustomProps {
   type?: CustomIconType
   className?: string
   children?: React.ReactNode
-  theme?: 'light' | 'dark'
 }
 export const CustomIcon: React.FC<CustomProps> = (props) => {
-  const { type, className, children, theme } = props
+  const { type, className, children } = props
   const { light, dark } = type
     ? customIconMap[type]
     : { light: null, dark: null }
 
-  const IconComponent = theme === 'light' ? light : dark
+  const currentTheme = document.documentElement.classList.contains('dark')
+    ? 'dark'
+    : 'light'
+  console.log(currentTheme)
+
+  const IconComponent =
+    currentTheme === 'dark' && dark
+      ? dark
+      : light ||
+        (light as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>)
 
   return IconComponent ? (
-    <IconComponent className={className}>{children}</IconComponent>
+    <IconComponent className={clsx(`${className}`)}>{children}</IconComponent>
   ) : null
 }
