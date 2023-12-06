@@ -1,7 +1,6 @@
 .menu {
-  @apply flex w-[228px] cursor-pointer flex-row gap-3 rounded-lg px-4 py-3 font-archivo font-medium text-neutral-800 hover:bg-neutral-100;
+  @apply flex cursor-pointer flex-row gap-3 rounded-lg px-4 py-3 font-archivo font-medium text-neutral-800 hover:bg-neutral-100;
 }
-
 .menu:active {
   @apply bg-neutral-100 text-secondary-blue-500;
 }

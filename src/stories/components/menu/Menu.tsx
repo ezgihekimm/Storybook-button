@@ -1,23 +1,18 @@
 import clsx from 'clsx'
+import { ReactNode } from 'react'
 import Icon, { IconType } from '../icon/icon'
 import './menu.scss'
 
 export interface MenuProps {
-  label?: string
   icon?: IconType
   activedIcon?: IconType
   actived?: boolean
   onMenuClick?: () => void
+  children?: ReactNode
 }
 
 export const Menu = (props: MenuProps) => {
-  const {
-    label = 'Genel Bakış',
-    icon,
-    activedIcon,
-    actived,
-    onMenuClick,
-  } = props
+  const { icon, activedIcon, actived, onMenuClick, children } = props
 
   const handleClick = () => {
     if (onMenuClick) {
@@ -35,7 +30,7 @@ export const Menu = (props: MenuProps) => {
       ) : (
         <Icon type={icon} size="lg" />
       )}
-      {label}
+      {children}
     </div>
   )
 }

@@ -53,14 +53,15 @@ export const Header = (props: HeaderProps) => {
         <div className="base-logo">{logo && <Logo />}</div>
         <div className="mobile-logo">{mobileLogo && <MobileLogo />}</div>
         <div className="vl"></div>
+
         <Text textSize="xl" weight="medium">
           {dropDownText}
         </Text>
-        <div className="ml-2 mr-1">
+        <div className="badge-container">
           {badge && <Badge type={badgeType}>Beta</Badge>}
         </div>
         <button className="drop">
-          <Icon type="ChevronDownSolid" />
+          <Icon type="ChevronDownSolid" color="neutral" size="lg" />
         </button>
         {searchBar && (
           <div className="searchBar">

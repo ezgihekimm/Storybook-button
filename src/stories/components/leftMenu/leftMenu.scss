@@ -7,3 +7,12 @@
 .col-bottom {
   @apply flex flex-row justify-center gap-1;
 }
+.label-container {
+  @apply hidden lg:block;
+}
+// Tablet modu için ekran genişliği
+@media (max-width: 1023px) {
+  .left-menu {
+    @apply w-[88px] items-center;
+  }
+}

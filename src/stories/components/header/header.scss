@@ -1,5 +1,5 @@
 .header {
-  @apply flex w-screen flex-row justify-between pb-3 pe-6 ps-6 pt-3;
+  @apply flex w-full flex-row justify-between pb-3 pe-6 ps-6 pt-3;
 }
 .hamburger-menu {
   @apply sm:block md:hidden;
@@ -10,6 +10,10 @@
 .base-logo {
   @apply md:block;
 }
+.badge-container {
+  @apply ml-2 mr-1 hidden lg:block;
+}
+
 .vl {
   @apply ml-4 mr-4 flex h-[30px] border-r-[1px] border-neutral-500;
 }

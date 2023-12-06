@@ -25,11 +25,12 @@ export const LeftMenu = (props: LeftMenuProps) => {
           <Menu
             key={index}
             icon={item.icon}
-            label={item.label}
             activedIcon={item.activedIcon}
             onMenuClick={item.onClick}
             actived={item.actived}
-          />
+          >
+            <div className="label-container">{item.label}</div>
+          </Menu>
         ))}
       </div>
       <div className="col-bottom">

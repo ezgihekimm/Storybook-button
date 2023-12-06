@@ -1,10 +1,24 @@
 'use client'
 import { useState } from 'react'
+import Logo from '../stories/assets/Logo (Resize).svg'
+import { Header } from '../stories/components/header/Header'
 import { LeftMenu } from '../stories/components/leftMenu/leftMenu'
 export default function Home() {
   const [activeMenu, setActiveMenu] = useState('')
   return (
     <>
+      <Header
+        logo={Logo}
+        buttonText="Kripto Al"
+        badgeType="primary"
+        badge
+        dropDownText="Pro"
+        searchBar
+        firstIcon="Wallet"
+        secondIcon="Bell"
+        thirdIcon="QuestionMarkCircle"
+        endIcon="User"
+      ></Header>
       <LeftMenu
         topMenuItems={[
           {
