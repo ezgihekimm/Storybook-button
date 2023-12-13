@@ -9,6 +9,9 @@ const config: StorybookConfig = {
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     '@storybook/addon-storysource',
+    '@storybook/addon-styling',
+    '@toptal/davinci-storybook-live-edit-addon',
+    '@storybook/addon-interactions',
     {
       name: '@storybook/addon-styling',
       options: {},
@@ -34,24 +37,19 @@ const config: StorybookConfig = {
           include: [path.resolve(__dirname, '../src/stories/components')],
         },
         loaderOptions: {
-          prettierConfig: { printWidth: 80, singleQuote: false },
-        },
-      },
-    },
-    {
-      name: '@storybook/addon-storysource',
-      options: {
-        loaderOptions: {
           parser: 'typescript',
           prettierConfig: { printWidth: 80, singleQuote: false },
         },
       },
     },
+    '@storybook/addon-mdx-gfm',
   ],
   framework: {
     name: '@storybook/nextjs',
     options: {},
   },
-  docs: {},
+  docs: {
+    autodocs: true,
+  },
 }
 export default config
