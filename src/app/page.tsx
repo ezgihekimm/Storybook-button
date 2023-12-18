@@ -7,6 +7,9 @@ export default function Home() {
   const [activeMenu, setActiveMenu] = useState('')
   return (
     <>
+      <div className="">
+        <p>Genel Bakış</p>
+      </div>
       <Header
         logo={Logo}
         buttonText="Kripto Al"

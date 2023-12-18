@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import './badge.scss'
 
 export default interface BadgeProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   type?: BadgeType
 }
 
